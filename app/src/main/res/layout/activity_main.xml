@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.scheeles.valentin.scheelestats.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:background="@android:color/white"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hallo Steffi. Hier sind deine Statistiken:"
+                android:paddingBottom="10dp"
+                style="@android:style/TextAppearance.Material.Title" />
+
+            <TextView
+                android:text="DummyAnruf1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/AnrufText1" />
+
+            <TextView
+                android:text="DummyAnruf2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/AnrufText2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:id="@+id/Linear1">
+
+                <Space
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent" />
+
+                <TextView
+                    android:text="Lade Anrufdaten..."
+                    android:layout_width="103dp"
+                    android:layout_height="44dp"
+                    android:id="@+id/AnrufLadeText1"
+                    android:layout_alignTop="@+id/AnrufProgressbar1"
+                    android:layout_toLeftOf="@+id/AnrufProgressbar1"
+                    android:layout_toStartOf="@+id/AnrufProgressbar1"
+
+                    android:padding="5dp" />
+
+                <ProgressBar
+                    style="@android:style/Widget.Holo.ProgressBar.Large"
+                    android:layout_width="94dp"
+                    android:layout_height="44dp"
+                    android:id="@+id/AnrufProgressbar1"
+                    android:layout_below="@+id/textView3"
+                    android:layout_centerHorizontal="true" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:text="DummyData1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/DataText1" />
+
+            <TextView
+                android:text="DummyData2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/DataText2" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Linear2">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="Lade Datennutzung..."
+                    android:layout_width="103dp"
+                    android:layout_height="44dp"
+                    android:id="@+id/DataLadeText1"
+                    android:padding="5dp" />
+
+                <ProgressBar
+                    style="@android:style/Widget.Holo.Light.ProgressBar.Large"
+                    android:layout_width="94dp"
+                    android:layout_height="44dp"
+                    android:id="@+id/DataProgressbar" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
